@@ -1,8 +1,12 @@
 let form = document.querySelector('form')
 let button = document.querySelector('#submitBtn')
+let usernameInput = document.querySelector('#username')
+let passwordInput = document.querySelector('#password')
 
 const resetButton = () => {
     button.value = 'Continue'
+    usernameInput.value = ''
+    passwordInput.value = ''
 }
 
 form.addEventListener("submit", (event) => {
@@ -28,7 +32,5 @@ const handleSubmit = (event) => {
 }
 
 document.querySelector('form').addEventListener('submit', handleSubmit)
-button.addEventListener("click", addLoading)
+button.addEventListener("click")
 form.addEventListener("submit", resetButton)
-
-
